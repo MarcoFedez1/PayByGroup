@@ -80,27 +80,9 @@ public class signUp {
 	    	signIn.click();
 	    }
 	    
-		public void SwitchWinTabs() {
-			// It will return the parent window name as a String
-			String parent=driver.getWindowHandle();
-		    // This will return the number of windows opened by Webdriver and will return Set of St//rings
-		 	Set<String>s1=driver.getWindowHandles();
-		 	// Now we will iterate using Iterator
-		 	Iterator<String> I1= s1.iterator();
-		 	while(I1.hasNext())
-		 	{
-		 		
-		 		String child_window=I1.next();
-		   		// Here we will compare if parent window is not equal to child window then we            will close
-		 		if(!parent.equals(child_window))	  {
-		 			driver.switchTo().window(child_window);
-		 		}
-		 	}
-		}
-		
-		public void clickConfirm() {
-			confirm.click();
-		}
+	public void clickConfirm() {
+		confirm.click();
+	}
 		
 		
 }
